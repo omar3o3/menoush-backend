@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   delete "/logout", to: "sessions#destroy"
 
+  get "/desserts", to: "desserts#index"
+
 end
