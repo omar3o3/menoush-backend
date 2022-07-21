@@ -1,5 +1,28 @@
 puts '-------------SEEDING HAS FINISHED-------------'
 
+# users with false admin
+User.create!(
+    username: "ramo3o3",
+    first_name: "Ramo",
+    last_name: "Tantawy",
+    email: "ramo@gmail.com"
+    admin: false
+    password: "mypassword",
+    password_confirmation: "mypassword"
+)
+
+# users with true admin
+User.create!(
+    username: "omar3o3",
+    first_name: "Omar",
+    last_name: "Tantawy",
+    email: "omar@gmail.com"
+    admin: true
+    password: "mypassword",
+    password_confirmation: "mypassword"
+)
+
+
 # kunafa
 Dessert.create!(
     english_name: "kunafa platter with mango",
