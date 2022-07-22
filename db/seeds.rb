@@ -61,7 +61,7 @@ Dessert.create!(
 Dessert.create!(
     english_name: "stuffed Qatayef with nuts (fried)",
     arabic_name: "قطايف محشيه مكسرات و محمرة",
-    dessert_type: "Qatayef",
+    dessert_type: "qatayef",
     price: 25,
     image_url: "https://www.thaqfny.com/wp-content/uploads/2022/03/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A2%D9%A0%D9%A3%D9%A2%D9%A7-%D9%A2%D9%A0%D9%A1%D9%A9%D9%A1%D9%A9_Gallery.jpg"
 )
@@ -69,7 +69,7 @@ Dessert.create!(
 Dessert.create!(
     english_name: "stuffed Qatayef with pistachios, qishda and syrup (not fried)",
     arabic_name: "قطايف محشيه مكسرات و محمرة",
-    dessert_type: "Qatayef",
+    dessert_type: "qatayef",
     price: 30,
     image_url: "https://www.setyfood.com/wp-content/uploads/2020/04/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D9%82%D8%B7%D8%A7%D9%8A%D9%81.jpeg"
 )
