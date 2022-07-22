@@ -5,7 +5,6 @@ class CreateDesserts < ActiveRecord::Migration[6.1]
       t.string :arabic_name
       t.string :dessert_type
       t.decimal :price
-      t.string :image_url
 
       t.timestamps
     end

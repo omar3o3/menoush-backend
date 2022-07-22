@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2022_07_21_193805) do
     t.string "arabic_name"
     t.string "dessert_type"
     t.decimal "price"
-    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
