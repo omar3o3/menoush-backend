@@ -7,17 +7,28 @@ class DessertsController < ApplicationController
 
     def create
         dessert = Dessert.create!(dessert_params) 
-        @dessert.images.attach(io: params[:images],filename: 'file.pdf', content_type: 'image/pdf')
+        # dessert.images.attach(params[:images])
         # @dessert.images.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
         # url_for(@dessert.images)
         render json: dessert, status: :ok
     end
 # each_serializer: DessertPreviewSerializer
 
+    def add_images
+        # byebug
+        dessert = Dessert.find(params[:id])
+        dessert.images.attach(params[:images])
+        render json: dessert, status: :ok
+    end
+
     private
     
     def dessert_params
-        params.permit(:english_name, :arabic_name, :dessert_type , :price, :images)
+        params.permit(:english_name, :arabic_name, :dessert_type , :price, images:[])
+    end
+
+    def new_image_params
+        params.permit(:id, images:[])
     end
 
 end
