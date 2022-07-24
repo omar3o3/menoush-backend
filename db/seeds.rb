@@ -24,78 +24,78 @@ User.create!(
 
 
 # kunafa
-Dessert.create!(
-    english_name: "kunafa platter with mango",
-    arabic_name: "صنيه كنافة بالمانجو",
-    dessert_type: "kunafa",
-    price: 45,
-)
+# Dessert.create!(
+#     english_name: "kunafa platter with mango",
+#     arabic_name: "صنيه كنافة بالمانجو",
+#     dessert_type: "kunafa",
+#     price: 45,
+# )
 
-Dessert.create!(
-    english_name: "kunafa platter with qishda",
-    arabic_name: "صنيه كنافة بالقشدة",
-    dessert_type: "kunafa",
-    price: 35,
-)
+# Dessert.create!(
+#     english_name: "kunafa platter with qishda",
+#     arabic_name: "صنيه كنافة بالقشدة",
+#     dessert_type: "kunafa",
+#     price: 35,
+# )
 
-# cookies
-Dessert.create!(
-    english_name: "plain kahk",
-    arabic_name: "كحك سادة",
-    dessert_type: "cookie",
-    price: 18,
-)
+# # cookies
+# Dessert.create!(
+#     english_name: "plain kahk",
+#     arabic_name: "كحك سادة",
+#     dessert_type: "cookie",
+#     price: 18,
+# )
 
-Dessert.create!(
-    english_name: "ajwa kahk",
-    arabic_name: "كحك سادة",
-    dessert_type: "cookie",
-    price: 20,
-)
+# Dessert.create!(
+#     english_name: "ajwa kahk",
+#     arabic_name: "كحك سادة",
+#     dessert_type: "cookie",
+#     price: 20,
+# )
 
-# Qatayef
-Dessert.create!(
-    english_name: "stuffed Qatayef with nuts (fried)",
-    arabic_name: "قطايف محشيه مكسرات و محمرة",
-    dessert_type: "qatayef",
-    price: 25,
-)
+# # Qatayef
+# Dessert.create!(
+#     english_name: "stuffed Qatayef with nuts (fried)",
+#     arabic_name: "قطايف محشيه مكسرات و محمرة",
+#     dessert_type: "qatayef",
+#     price: 25,
+# )
 
-Dessert.create!(
-    english_name: "stuffed Qatayef with pistachios, qishda and syrup (not fried)",
-    arabic_name: "قطايف محشيه مكسرات و محمرة",
-    dessert_type: "qatayef",
-    price: 30,
-)
+# Dessert.create!(
+#     english_name: "stuffed Qatayef with pistachios, qishda and syrup (not fried)",
+#     arabic_name: "قطايف محشيه مكسرات و محمرة",
+#     dessert_type: "qatayef",
+#     price: 30,
+# )
 
-# platters
-Dessert.create!(
-    english_name: "large mix platter",
-    arabic_name: "طبق كبير مشكل",
-    dessert_type: "platters",
-    price: 85,
-)
+# # platters
+# Dessert.create!(
+#     english_name: "large mix platter",
+#     arabic_name: "طبق كبير مشكل",
+#     dessert_type: "platters",
+#     price: 85,
+# )
 
-Dessert.create!(
-    english_name: "large baklava full sheet",
-    arabic_name: "صنيه بقلاوة كبيرة",
-    dessert_type: "platters",
-    price: 60,
-)
+# Dessert.create!(
+#     english_name: "large baklava full sheet",
+#     arabic_name: "صنيه بقلاوة كبيرة",
+#     dessert_type: "platters",
+#     price: 60,
+# )
 
-# cakes
-Dessert.create!(
-    english_name: "medium cake topped with various fruits",
-    arabic_name: "كيك بالفاكهة وسط",
-    dessert_type: "cakes",
-    price: 45,
-)
+# # cakes
+# Dessert.create!(
+#     english_name: "medium cake topped with various fruits",
+#     arabic_name: "كيك بالفاكهة وسط",
+#     dessert_type: "cakes",
+#     price: 45,
+# )
 
-Dessert.create!(
-    english_name: "Trilecha cake",
-    arabic_name: "كيك التريليتشا (كيك بالحليب و الكريمة مع كراميل علي الوجه)",
-    dessert_type: "cakes",
-    price: 45,
-)
+# Dessert.create!(
+#     english_name: "Trilecha cake",
+#     arabic_name: "كيك التريليتشا (كيك بالحليب و الكريمة مع كراميل علي الوجه)",
+#     dessert_type: "cakes",
+#     price: 45,
+# )
 
 puts '-------------SEEDING HAS FINISHED-------------'
