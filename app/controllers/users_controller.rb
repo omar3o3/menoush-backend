@@ -1,17 +1,14 @@
 class UsersController < ApplicationController
+    skip_before_action :authorize, only: :create
     
     def create
         user = User.create!(user_params)
-        if user.valid?
-            render json: user, status: 201
-        else
-            render json: {error: "Invalid user"}, status: 422
-        end
+        session[:user_id] = user.id
+        render json: user, status: :created
     end
 
     def show
-        current_user = User.find(session[:current_user])
-        render json: current_user
+        render json: @current_user
     end
 
 
