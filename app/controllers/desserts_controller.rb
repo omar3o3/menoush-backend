@@ -16,6 +16,8 @@ class DessertsController < ApplicationController
 
     def add_images
         # byebug
+        # puts params[:images]
+        # params.permit(:english_name, images:[])
         dessert = Dessert.find_by(english_name: params[:english_name])
         dessert.images.attach(params[:images])
         render json: dessert, status: :ok
