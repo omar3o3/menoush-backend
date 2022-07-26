@@ -12,11 +12,8 @@ class DessertsController < ApplicationController
         # url_for(@dessert.images)
         render json: dessert, status: :ok
     end
-# each_serializer: DessertPreviewSerializer
 
     def add_images
-        # byebug
-        # puts params[:images]
         # params.permit(:english_name, images:[])
         dessert = Dessert.find_by(english_name: params[:english_name])
         dessert.images.attach(params[:images])
