@@ -1,6 +1,7 @@
 class Dessert < ApplicationRecord
-    # has_one_attached :image
     has_many_attached :images
+    has_one_attached :preview_image
+    
 
     def images_url
         images
@@ -9,5 +10,9 @@ class Dessert < ApplicationRecord
             imagess.push(image.url)
         end
         return imagess
+    end
+
+    def preview_image_url
+        preview_image.url
     end
 end

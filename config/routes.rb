@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get "/desserts", to: "desserts#index"
   post "/create-dessert", to: "desserts#create"
   post "/add-images", to: "desserts#add_images"
+  post "/add-preview-image", to: "desserts#add_preview_image"
 
 end

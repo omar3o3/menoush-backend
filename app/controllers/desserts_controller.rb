@@ -23,6 +23,16 @@ class DessertsController < ApplicationController
         render json: dessert, status: :ok
     end
 
+    def add_preview_image
+        # byebug
+        dessert = Dessert.find_by(english_name: params[:english_name])
+        if dessert.preview_image.attached? then
+            dessert.preview_image.purge
+        end
+        dessert.preview_image.attach(params[:preview_image])
+        render json: dessert, status: :ok
+    end
+
     private
     
     def dessert_params
@@ -30,8 +40,8 @@ class DessertsController < ApplicationController
         params.permit(:english_name, :arabic_name, :dessert_type , :price, images:[])
     end
 
-    def new_image_params
-        params.permit(:english_name, images:[])
-    end
+    # def new_image_params
+    #     params.permit(:english_name, images:[])
+    # end
 
 end
