@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   post "/create-dessert", to: "desserts#create"
   post "/add-images", to: "desserts#add_images"
   post "/add-preview-image", to: "desserts#add_preview_image"
+  patch "/edit-dessert", to: "desserts#update"
 
 end

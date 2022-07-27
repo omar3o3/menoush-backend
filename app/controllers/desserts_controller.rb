@@ -13,6 +13,25 @@ class DessertsController < ApplicationController
         render json: dessert, status: :ok
     end
 
+    def update
+        # byebug
+        dessert = Dessert.find(params[:id])
+
+        if params.has_key?(:english_name) then
+            dessert.update(english_name: params[:english_name])
+        end
+
+        if params.has_key?(:arabic_name) then
+            dessert.update(arabic_name: params[:arabic_name])
+        end
+
+        if params.has_key?(:price) then
+            dessert.update(price: params[:price])
+        end
+
+        render json: dessert, status: :ok
+    end
+
     def add_images
         # dessert = Dessert.find_by(english_name: params[:english_name])
         dessert = Dessert.find(params[:id])
