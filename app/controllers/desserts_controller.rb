@@ -14,8 +14,8 @@ class DessertsController < ApplicationController
     end
 
     def add_images
-        # params.permit(:english_name, images:[])
-        dessert = Dessert.find_by(english_name: params[:english_name])
+        # dessert = Dessert.find_by(english_name: params[:english_name])
+        dessert = Dessert.find(params[:id])
         dessert.images.attach(params[:images])
         render json: dessert, status: :ok
     end
@@ -24,8 +24,6 @@ class DessertsController < ApplicationController
         # dessert = Dessert.find_by(english_name: params[:english_name])
         
         dessert = Dessert.find(params[:id])
-        # puts dessert[:english_name]
-        
         if dessert.preview_image.attached? then
             dessert.preview_image.purge
         end
