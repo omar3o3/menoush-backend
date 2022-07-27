@@ -21,8 +21,11 @@ class DessertsController < ApplicationController
     end
 
     def add_preview_image
-        # byebug
-        dessert = Dessert.find_by(english_name: params[:english_name])
+        # dessert = Dessert.find_by(english_name: params[:english_name])
+        
+        dessert = Dessert.find(params[:id])
+        # puts dessert[:english_name]
+        
         if dessert.preview_image.attached? then
             dessert.preview_image.purge
         end
