@@ -1,7 +1,9 @@
 class Dessert < ApplicationRecord
     has_many_attached :images
     has_one_attached :preview_image
-    
+
+    # belongs_to :cart_items
+
 
     def images_url
         images

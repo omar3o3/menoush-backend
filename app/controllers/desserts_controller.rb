@@ -56,8 +56,4 @@ class DessertsController < ApplicationController
         params.permit(:english_name, :arabic_name, :dessert_type , :price, images:[])
     end
 
-    # def new_image_params
-    #     params.permit(:english_name, images:[])
-    # end
-
 end
