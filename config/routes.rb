@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   post "/add-to-cart", to: "cart_items#add_to_cart"
 
+  # get "/retrieve-cart", to: "carts#retrieve_cart"
+  get "/retrieve-cart/:user_id", to: "carts#show"
+
 end
