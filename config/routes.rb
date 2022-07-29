@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post "/add-preview-image", to: "desserts#add_preview_image"
   patch "/edit-dessert", to: "desserts#update"
 
+  post "/add-to-cart", to: "cart_items#add_to_cart"
+
 end

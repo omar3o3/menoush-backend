@@ -44,15 +44,14 @@ ActiveRecord::Schema.define(version: 2022_07_28_203641) do
   end
 
   create_table "cart_items", force: :cascade do |t|
-    t.integer "cart_id"
     t.integer "dessert_id"
+    t.integer "cart_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "carts", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "cart_item_id"
     t.boolean "pending_status", default: false
     t.boolean "acceptance_status", default: false
     t.boolean "completed_status", default: false
