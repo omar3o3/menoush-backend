@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   patch "/edit-dessert", to: "desserts#update"
 
   post "/add-to-cart", to: "cart_items#add_to_cart"
+  delete "/remove-from-cart", to: "cart_items#destroy"
 
-  # get "/retrieve-cart", to: "carts#retrieve_cart"
   get "/retrieve-cart/:user_id", to: "carts#show"
 
 end

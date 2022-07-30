@@ -11,4 +11,10 @@ class CartItemsController < ApplicationController
         render json: cart_item, status: :created
     end
 
+    def destroy
+        cart_item = CartItem.find(params[:cart_item_id])
+        cart_item.destroy
+        # byebug
+    end
+
 end
