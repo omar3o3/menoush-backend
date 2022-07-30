@@ -5,10 +5,19 @@ class CartItemsController < ApplicationController
         user = User.find(params[:user_id])
         dessert = Dessert.find(params[:dessert_id])
         cart = Cart.where("user_id = ? AND current_cart = ?", user.id , true).first
+        # byebug
         if cart && user then
-            cart_item = CartItem.create(cart_id: cart.id, dessert_id: dessert.id)
+
+            if cart.desserts.include?(dessert) then
+                cart_item = cart.cart_items.find_by(dessert_id: dessert.id)
+                cart_item.quantity += 1
+                cart_item.save
+                # byebug
+            else
+                cart_item = CartItem.create(cart_id: cart.id, dessert_id: dessert.id)
+            end
         end
-        render json: cart_item, status: :created
+        render json: cart_item, status: :ok
     end
 
     def destroy

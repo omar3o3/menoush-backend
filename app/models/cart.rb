@@ -8,6 +8,7 @@ class Cart < ApplicationRecord
         cart = Cart.where("user_id = ? AND current_cart = ?", user_id , true).first
         # cart.cart_items
         cart.desserts
+        # [cart.desserts , cart.cart_items]
     end
 
 end
