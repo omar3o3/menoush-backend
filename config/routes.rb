@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   delete "/remove-from-cart", to: "cart_items#destroy"
 
   get "/retrieve-cart/:user_id", to: "carts#show"
+  patch "/checkout-cart", to: "carts#checkout_cart"
 
 end
