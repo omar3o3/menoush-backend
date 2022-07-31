@@ -4,11 +4,21 @@ class Cart < ApplicationRecord
     belongs_to :user
 
     def show_cart_items
-        # byebug
         cart = Cart.where("user_id = ? AND current_cart = ?", user_id , true).first
-        # cart.cart_items
         cart.desserts
         # [cart.desserts , cart.cart_items]
+    end
+
+    def show_pending_cart_items
+        cart = Cart.where("user_id = ? AND current_cart = ?", user_id , false).first
+        cart.desserts
+    end
+
+    def show_pending_cart_name
+        cart = Cart.where("user_id = ? AND current_cart = ?", user_id , false).first
+        first_name = cart.user.first_name
+        last_name = cart.user.last_name
+        [first_name, last_name].join(" ")
     end
 
 end

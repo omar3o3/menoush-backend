@@ -17,4 +17,9 @@ class CartsController < ApplicationController
         render json: new_cart, status: :ok
     end
 
+    def get_pending_orders
+        pending_orders = Cart.where("current_cart = ?", false)
+        render json: pending_orders, status: :ok
+    end
+
 end
