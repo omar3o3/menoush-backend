@@ -41,4 +41,16 @@ class CartsController < ApplicationController
         render json: order, status: :ok
     end
 
+    def get_accepted_orders
+        accepted_orders = Cart.where("acceptance_status = ? AND completed_status =?", true , false)
+        render json: accepted_orders, status: :ok
+    end
+
+    def complete_order
+        order = Cart.find(params[:order_id])
+        order.update(completed_status: true)
+        # byebug
+        render json: order, status: :ok
+    end
+
 end
