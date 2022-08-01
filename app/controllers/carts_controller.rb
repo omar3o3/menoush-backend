@@ -53,4 +53,10 @@ class CartsController < ApplicationController
         render json: order, status: :ok
     end
 
+    def user_history
+        # byebug
+        finished_orders = Cart.where("user_id = ? AND current_cart = ?", session[:user_id] , false)
+        render json: finished_orders, status: :ok
+    end
+
 end
