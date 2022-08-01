@@ -7,6 +7,7 @@ class CartsController < ApplicationController
     end
 
     def checkout_cart
+        # byebug
         user = User.find(params[:user_id])
         cart = Cart.where("user_id = ? AND current_cart = ?", user.id , true).first
         cart.update(

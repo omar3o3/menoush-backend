@@ -21,4 +21,9 @@ class Cart < ApplicationRecord
         [first_name, last_name].join(" ")
     end
 
+    def user_email
+        cart = Cart.where("user_id = ? AND current_cart = ?", user_id , false).first
+        cart.user.email
+    end
+
 end
