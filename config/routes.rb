@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   patch "/checkout-cart", to: "carts#checkout_cart"
   get "/get-pending-orders", to: "carts#get_pending_orders"
   patch "/accept-order", to: "carts#accept_order"
+  patch "/decline-order", to: "carts#decline_order"
 
 end

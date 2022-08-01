@@ -33,4 +33,12 @@ class CartsController < ApplicationController
         render json: order, status: :ok
     end
 
+    def decline_order
+        order = Cart.find(params[:order_id])
+        order.update(
+            pending_status: false
+        )
+        render json: order, status: :ok
+    end
+
 end
