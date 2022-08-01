@@ -18,8 +18,19 @@ class CartsController < ApplicationController
     end
 
     def get_pending_orders
-        pending_orders = Cart.where("current_cart = ?", false)
+        pending_orders = Cart.where("current_cart = ? AND pending_status =?", false , true)
         render json: pending_orders, status: :ok
+    end
+
+    def accept_order
+        order = Cart.find(params[:order_id])
+        order.update(
+            days_to_complete: params[:days_to_complete], 
+            acceptance_status: true,
+            pending_status: false
+        )
+        # byebug
+        render json: order, status: :ok
     end
 
 end

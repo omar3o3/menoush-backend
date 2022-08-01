@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   get "/retrieve-cart/:user_id", to: "carts#show"
   patch "/checkout-cart", to: "carts#checkout_cart"
   get "/get-pending-orders", to: "carts#get_pending_orders"
+  patch "/accept-order", to: "carts#accept_order"
 
 end
