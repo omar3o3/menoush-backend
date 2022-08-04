@@ -49,6 +49,12 @@ class DessertsController < ApplicationController
         render json: dessert, status: :ok
     end
 
+    def destroy
+        deleted_dessert = Dessert.find(params[:dessert_id])
+        deleted_dessert.destroy
+        # byebug
+    end
+
     private
     
     def dessert_params

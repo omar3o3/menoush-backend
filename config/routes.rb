@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post "/add-images", to: "desserts#add_images"
   post "/add-preview-image", to: "desserts#add_preview_image"
   patch "/edit-dessert", to: "desserts#update"
+  delete "/delete-dessert", to: "desserts#destroy"
 
   post "/add-to-cart", to: "cart_items#add_to_cart"
   delete "/remove-from-cart", to: "cart_items#destroy"
