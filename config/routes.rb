@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   post "/add-to-cart", to: "cart_items#add_to_cart"
   delete "/remove-from-cart", to: "cart_items#destroy"
+  patch "/update-item-quantity", to: "cart_items#update"
 
   get "/retrieve-cart/:user_id", to: "carts#show"
   patch "/checkout-cart", to: "carts#checkout_cart"

@@ -26,4 +26,12 @@ class CartItemsController < ApplicationController
         # byebug
     end
 
+    def update
+        cart_item = CartItem.find(params[:cart_item_id])
+        cart_item.update(quantity: params[:quantity])
+        # cart_item.self_total
+        # byebug
+        render json: [cart_item , cart_item.self_total], status: :ok
+    end
+
 end
