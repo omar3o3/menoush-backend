@@ -32,6 +32,7 @@ class CartItemsController < ApplicationController
         # cart_item.self_total
         # byebug
         render json: [cart_item , cart_item.self_total], status: :ok
+        # render json: cart_item, status: :ok
     end
 
 end
