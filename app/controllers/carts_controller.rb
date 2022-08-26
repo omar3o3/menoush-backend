@@ -12,7 +12,8 @@ class CartsController < ApplicationController
         cart = Cart.where("user_id = ? AND current_cart = ?", user.id , true).first
         cart.update(
             pending_status: true,
-            current_cart: false
+            current_cart: false,
+            day_checked_out: DateTime.now
         )
         new_cart = Cart.create!(user_id: user.id)
         render json: new_cart, status: :ok
