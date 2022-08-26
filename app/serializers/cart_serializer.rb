@@ -8,8 +8,11 @@ class CartSerializer < ActiveModel::Serializer
   :show_pending_cart_name,
   :days_to_complete,
   :user_email,
-  :day_checked_out,
+  # :day_checked_out,
+  :converted_checkout_date,
   :day_accepted
+
+  
   # , :show_pending_cart_items
   # :show_cart_items,
   # day_checked_out day_accepted

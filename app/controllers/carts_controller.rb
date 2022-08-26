@@ -29,7 +29,8 @@ class CartsController < ApplicationController
         order.update(
             days_to_complete: params[:days_to_complete], 
             acceptance_status: true,
-            pending_status: false
+            pending_status: false,
+            day_accepted: DateTime.now
         )
         # byebug
         render json: order, status: :ok
