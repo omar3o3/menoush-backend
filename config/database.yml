@@ -79,8 +79,17 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# production:
+#   <<: *default
+#   database: menoush_backend_production
+#   username: menoush_backend
+#   password: <%= ENV['MENOUSH_BACKEND_DATABASE_PASSWORD'] %>
+#^commented out the above for aws ec2 deployment
+#^commented out the above for aws ec2 deployment
+#^commented out the above for aws ec2 deployment
+
 production:
-  <<: *default
-  database: menoush_backend_production
-  username: menoush_backend
-  password: <%= ENV['MENOUSH_BACKEND_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+#^added the above for aws ec2 deployment
+#^added the above for aws ec2 deployment
+#^added the above for aws ec2 deployment
