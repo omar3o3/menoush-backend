@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/desserts", to: "desserts#index"
-  # get "https://menoushbackend.netlify.app/desserts", to: "desserts#index"
   post "/create-dessert", to: "desserts#create"
   post "/add-images", to: "desserts#add_images"
   post "/add-preview-image", to: "desserts#add_preview_image"
